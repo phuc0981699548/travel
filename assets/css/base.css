@@ -1,0 +1,42 @@
+:root {
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* button */
+.button {
+    height: 43px;
+    min-width: 120px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    list-style: none;
+    border-radius: 30px;
+    padding: 18px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border: none;
+}
+.button:hover {
+    opacity: 0.8;
+}
+
+.button-s {
+    height: 36px;
+}
+

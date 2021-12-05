@@ -1,0 +1,121 @@
+/* mobile && table */
+@media (max-width: 1024px) {
+    .hide-on-mobile-table {
+        display: none;
+    }
+    .header-img {
+        display: block;
+        width: 100%;
+        align-items: center;
+    }
+    .header-img__list {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .header-nav {
+        display: block;
+        text-align: center;
+    }
+    .header-wrapper {
+        height: 110px;
+    }
+    .header-nav__logo {
+        margin-bottom: 10px;
+    }
+    .header-content {
+        width: 100%;
+    }
+   
+    
+    
+   
+   
+    
+}
+
+/*  table */
+@media (min-width: 740px) and (max-width: 1024px) {
+    .hide-on-table {
+        display: none;
+    }
+    .tour-location {
+        margin-bottom: 64px;
+    }
+    .slide-heading {
+        top: 30px;
+    }
+    .slide-button {
+        top: 135px;
+    }
+    .beaches-content__img {
+        width: 115%;
+        margin-top: 16px;
+    }
+    .header-backr {
+        width: 240%;
+    }
+    
+    
+}
+
+/* mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-content__button-sub {
+        width: 100%;
+    }
+    .header-img {
+        width: 50%;
+        align-items: center;
+        display: inline-block;
+    }
+    .header-content__des {
+        font-size: 14px;
+    }
+
+    .header-content__heading {
+        font-size: 30px;
+    }
+    .slide-heading {
+        top: 57px;
+    }
+    .slide-button {
+        top: 167px;
+        
+    }
+    .beaches-he {
+        margin: 16px;
+    }
+   
+    .beaches-content__img {
+        margin-top: 16px;
+        width: 100%;
+    }
+    .beaches-content__label {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        top: -5px;
+        left: 0;
+
+    }
+    .beaches-name {
+        margin: 32px;
+    }
+    .beaches-footer {
+        margin-bottom: 16px;
+    }
+    .discover-content__des {
+        font-size: 2.4rem;
+
+    }
+    .header-backr {
+        width: 450%;
+    }
+    
+    
+
+    
+}
