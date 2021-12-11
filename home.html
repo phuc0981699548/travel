@@ -32,27 +32,22 @@
                             <img src="./assets/img/logo-header-heading.png " class="header-nav__img" alt="travel">
                         </div>
 
-                        <ul class="header-nav__list hide-on-mobile-table ">
+                        <ul class="header-nav__list ">
                             <li class="header-nav__item ">
-                                <a href="" class="header-nav__link">home</a>
+                                <a href="#" class="header-nav__link">home</a>
                             </li>
                             <li class="header-nav__item">
-                                <a href="" class="header-nav__link">packages</a>
+                                <a href="./packages.html" class="header-nav__link">packages</a>
                             </li>
                             <li class="header-nav__item">
-                                <a href="" class="header-nav__link">shop</a>
+                                <a href="./shop.html" class="header-nav__link">shop</a>
+                            </li>
+                           
+                            <li class="header-nav__item">
+                                <a href="./new.html" class="header-nav__link">news</a>
                             </li>
                             <li class="header-nav__item">
-                                <a href="" class="header-nav__link">about us</a>
-                            </li>
-                            <li class="header-nav__item">
-                                <a href="" class="header-nav__link">pages</a>
-                            </li>
-                            <li class="header-nav__item">
-                                <a href="" class="header-nav__link">news</a>
-                            </li>
-                            <li class="header-nav__item">
-                                <a href="" class="header-nav__link">
+                                <a href="./contact.html" class="header-nav__link">
                                     contact
                                     <ul class="header-nav-sub__list">
                                         <li class="header-nav-sub__item">Contact 1</li>
@@ -61,24 +56,36 @@
                                     </ul>
                                 </a>
                             </li>
+                            <li class="header-nav__item">
+                                <a href="./register.html" class="header-nav__link">đăng kí</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="./login.html" class="header-nav__link">đăng nhập</a>
+                            </li>
                             
                         </ul>
                        
-                        <a href="" class="header-nav-btn button button-s hide-on-mobile-table">book now</a>
+                        <a href="" class="header-nav-btn button button-s hide-on-mobile-table ">book now</a>
                         
                       
+                        <!-- menu mobile -->
+                       <div class="menu-toggle">
+                           <i class="fas fa-bars"></i>
 
-                        <a class="header-nav__menu">
-                            <img src="http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/menu.png" class="header-nav__menu-img" alt="menu">
-                        </a>
+                       </div>
+                       <div class="menu-close">
+                           <i class="fas fa-times "></i>
+
+                       </div>
+                        <div class="menu-bg"></div>
 
                     </div>
 
                 </div>
 
                 <div class="header-content">
-                    <h2 class="header-content__heading ">Search your next <span>Holiday</span> </h2>
-                    <div class="header-content__des ">CHECK OUR BEST PROMOTIONS</div>
+                    <h2 class="header-content__heading wow animate__slideInDown">Search your next <span>Holiday</span> </h2>
+                    <div class="header-content__des wow animate__slideInDown ">CHECK OUR BEST PROMOTIONS</div>
                     <a class="header-content__button button">
                         <span >Choose your Destination...
                             <i class="header-content__button-icon fas fa-search"></i>
@@ -97,7 +104,7 @@
 
                     
                    
-                    <div class="header-img ">
+                    <div class="header-img wow animate__slideInRight">
                         <div class="header-img__list">
                             <img src="./assets/img/header-img1.png"  alt="">
                             <div class="header-img__text">relax</div>
@@ -365,7 +372,7 @@
                             </div>
 
                             <div href="" class="beaches-info__control">
-                                <button class="beaches-info__button button">BOOK NOW</button>
+                                <button class="beaches-info__button button js-buy-ticket">BOOK NOW</button>
                             </div>
                         </div>
                     </div>
@@ -462,123 +469,7 @@
             </div>
         </div>
 
-        <!-- location -->
-        <div class="location-wrapper">
-            <div class="grid wide">
-                <div class="location">
-                    <div class="location-heading">
-                        <h5 class="location-heading__text wow animate__flip">PROMOTIONS</h5>
-                        <h3 class="location-heading__des wow animate__flip">OUR <span>PACKAGES</span></h3>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col l-4">
-                        <div class="location-hero">
-                            <img src="./assets/img/location1.jpg" alt="" class="location-content__img">
-                                <a class="location-content__sub">
-                                    <img src="./assets/img/location1-1.png" alt="" class="location-content__sub-img">
-                                </a>
-
-                            <div class="location-content">
-                                <div class="location-content__country">Berlin</div>
-                                <div class="location-content__continents">
-                                    <img src="./assets/img/location-icon.png" class="location-content__icon" alt="">
-                                    Europe
-                                </div>
-                                <div class="location-border-bottom"></div>
-                                <div class="location-content__list">
-                                    <div class="location-content__item">
-                                        <div class="location-content__item-text">CULTURAL</div>
-                                        <div class="location-content__item-des ">
-                                            RELAX
-                                            <span>+1</span>
-                                        </div>
-                                    </div>
-                                    <span class="location-content__item-price">700 $</span>
-
-                                </div>
-                                <div class="location-border-bottom"></div>
-
-                                <p class="location-content__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
-                                <a href="" class="location-content__button button button-s">DETAILS</a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col l-4">
-                        <div class="location-hero">
-                            <img src="./assets/img/location2.jpg" alt="" class="location-content__img">
-                                <a class="location-content__sub location-content__sub--pink">
-                                    <img src="./assets/img/location2-2.png" alt="" class="location-content__sub-img">
-                                </a>
-
-                            <div class="location-content">
-                                <div class="location-content__country">Berlin</div>
-                                <div class="location-content__continents">
-                                    <img src="./assets/img/location-icon.png" class="location-content__icon" alt="">
-                                    Europe
-                                </div>
-                                <div class="location-border-bottom"></div>
-                                <div class="location-content__list">
-                                    <div class="location-content__item">
-                                        <div class="location-content__item-text">CULTURAL</div>
-                                        <div class="location-content__item-des location-content__item-des--pink">
-                                            RELAX
-                                            <span>+1</span>
-                                        </div>
-                                    </div>
-                                    <span class="location-content__item-price">700 $</span>
-
-                                </div>
-                                <div class="location-border-bottom"></div>
-
-                                <p class="location-content__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
-                                <a href="" class="location-content__button button button-s location-content__button--pink">DETAILS</a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col l-4">
-                        <div class="location-hero">
-                            <img src="./assets/img/location3.jpg" alt="" class="location-content__img">
-                                <a class="location-content__sub location-content__sub--violet">
-                                    <img src="./assets/img/location3-3.png" alt="" class="location-content__sub-img">
-                                </a>
-
-                            <div class="location-content">
-                                <div class="location-content__country">Berlin</div>
-                                <div class="location-content__continents">
-                                    <img src="./assets/img/location-icon.png" class="location-content__icon" alt="">
-                                    Europe
-                                </div>
-                                <div class="location-border-bottom"></div>
-                                <div class="location-content__list">
-                                    <div class="location-content__item">
-                                        <div class="location-content__item-text">CULTURAL</div>
-                                        <div class="location-content__item-des location-content__item-des--violet">
-                                            RELAX
-                                            <span>+1</span>
-                                        </div>
-                                    </div>
-                                    <span class="location-content__item-price">700 $</span>
-
-                                </div>
-                                <div class="location-border-bottom"></div>
-
-                                <p class="location-content__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.</p>
-                                <a href="" class="location-content__button button button-s location-content__button--violet">DETAILS</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-        </div>
+     
 
         <!-- footer -->
         <footer class="footer">
@@ -591,8 +482,12 @@
                         </div>
                     </div>
                     <div class="col l-4 l-o-1 ">
-                        <input type="text" class="footer-control__input">
-                        <a class="footer-control__button button ">SEND</a>
+                        <div class="search-box">
+                            <input type="text" class="search-box__input">
+                            <button class="search-box__btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                         
                      </div> 
                 </div>
@@ -732,6 +627,50 @@
 
             </div>
         </div>
+
+        <!-- modal book ticket -->
+
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <header class="modal-header">
+                    <i class="modal-header-icon fas fa-ticket-alt "></i>
+                    Tickets
+                </header>
+            
+                <div class="modal-body">
+                    <label for="ticket-quantily" class="modal-label">
+                        <i class="fas fa-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="ticket-quantily" type="text" class="modal-input" placeholder="How many?">
+    
+    
+                    <label for="ticket-email" class="modal-label">
+                        <i class="fas fa-envelope"></i>
+                        Send To
+                    </label>
+                    <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email">
+    
+                    <button class="modal-button">
+                        pay 
+                        <i class="fas fa-dollar-sign"></i>
+                    </button>
+    
+                </div>
+    
+                <footer class="modal-footer">
+                    <p class="modal-help">Need <a href="">help?</a></p>
+                </footer>
+            </div>
+    
+        </div>
+        <!-- button back to top -->
+        <div class="button-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
     </div>
    
      <script
@@ -748,7 +687,7 @@
      ></script>
 
 
-    <script src="./main.js"></script>
+    <script  src="./main.js"></script>
  </body>
  </html>
                      

@@ -25,7 +25,63 @@
     .header-content {
         width: 100%;
     }
-   
+
+    .menu-toggle{
+        display: inline-block;
+    }
+
+    .header-nav__list {
+        position:fixed;
+        z-index: 5;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 100px 0 0;
+        margin: 0;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s linear;
+        
+    }
+    .header-nav__list.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .header-nav__item {
+        width: 100%;
+    }
+    
+    .header-nav__link {
+        color: #333;
+        display: block;
+        padding: 15px 25px;
+        text-transform: uppercase;
+    }
+    .label-button,
+    .shop-button,
+    .location-content__button {
+        width: 100%;
+    }
+
+    .modal-container {
+        margin: 16px;
+    }
+    
+    .footer-wrapper {
+        display: inline-block;
+        margin: 6px;
+    }
+    .search-box {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    
+    
     
     
    
@@ -115,7 +171,42 @@
         width: 450%;
     }
     
-    
+    .new-div {
+        margin: 0 64px 16px;
+        display: inline-block;
+        align-items: center;
+    }
 
+    .contact {
+        margin: 20px;
+    }
+
+    .label-button {
+        width: 100%;
+    }
+    
+    .shop-div {
+        margin: 32px;
+    }
+
+    .beaches-info__button {
+        width: 100%;
+    }
+
+    .location-hero {
+        margin: 16px;
+    }
+
+    .tab-container {
+        margin: 32px;
+    }
+    .tab-item {
+        font-size:12px;
+
+    }
+
+    .tab-icon {
+        font-size:12px;
+    }
     
 }
