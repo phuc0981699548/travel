@@ -125,90 +125,33 @@ window.addEventListener('load', () => {
 
 
   // validator
-  function Validator(options) {
+  function validator(options) {
+    // Ham thực hiện validate
+    function validate(inputElement , rule)  {
 
-
-    var selectorRules = {}
-    
-    function Validate(inputElement, rule) {
         var errorElement = inputElement.parentElement.querySelector(options.errorSelector)
-        var errorMessage
-        //Lây ra các rules của selector
-        var rules = selectorRules[rule.selector]
-        
-        for (var i = 0; i < rules.length; ++i) {
-            errorMessage = rules[i](inputElement.value)
-            if (errorMessage) 
-                break
-        }
+        var errorMessage = rule.test(inputElement.value)
 
-        if (errorMessage) {
+
+        if(errorMessage) {
             errorElement.innerText = errorMessage
             inputElement.parentElement.classList.add('invalid')
         } else {
             errorElement.innerText = ''
             inputElement.parentElement.classList.remove('invalid')
-        }
 
-        return !errorMessage
-                    
+        }
     }
 
     var formElement = document.querySelector(options.form)
     
-
     if(formElement) {
-        formElement.onsubmit = (e) => {
-            e.preventDefault()
-
-            var isFormValid = true
-
-            options.rules.forEach(rule => {
-                var inputElement = formElement.querySelector(rule.selector)
-                var isValid = Validate(inputElement, rule)
-                if (!isValid) {
-                    isFormValid = false
-                }
-
-                
-            })
-
-            if (isFormValid) {
-                //submit voi javascript
-                if (typeof options.onSubmit === 'function') {
-                    var enableInputs = formElement.querySelectorAll('[name]')
-
-                    var formValues = Array.from(enableInputs).reduce((values, input) => {
-                        values[input.name] = input.value
-                        return values
-
-                    }, {})
-                    options.onSubmit(formValues)
-                } 
-                //submit vs hanh vi mac dinh
-                else {
-                    formElement.submit()
-                }
-            } 
-
-            
-        }
-
         options.rules.forEach(rule => {
-
-            //Lưu lại các rules cho mỗi input
-            if (Array.isArray(selectorRules[rule.selector])) {
-                selectorRules[rule.selector].push(rule.test)
-                
-            } else {
-                selectorRules[rule.selector] = [rule.test]
-            }
+            var inputElement = formElement.querySelector(rule.selector) 
             
-            var inputElement = formElement.querySelector(rule.selector)
-            
-            if (inputElement) {
+            if(inputElement) {
                 inputElement.onblur = () => {
-                    Validate(inputElement, rule)
+                    validate(inputElement, rule)
                 }
 
                 inputElement.oninput = () => {
@@ -217,70 +160,74 @@ window.addEventListener('load', () => {
                     errorElement.innerText = ''
                     inputElement.parentElement.classList.remove('invalid')
                 }
+
             }
-        })
+        });
 
     }
-}
 
 
-Validator.isRequired = function (selector) {
-    return {
-        selector,
-        test(value) {
-            return value.trim() ? undefined : 'Vui Lòng nhập trường này'
-        }
-    }
-    
-}
-
-Validator.isEmail = function (selector) {
-    return {
-        selector,
-        test(value) {
-            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-            return regex.test(value) ? undefined : 'Trường này phải là Email'
-        }
-    }
-    
-}
 
 
-Validator.minLength = function (selector, min) {
-    return {
-        selector,
-        test(value) {
-            return value.length >= min ? undefined : `Vui Lòng nhập tối thiểu ${min} kí tự`
-        }
-    }
-    
-}
 
-Validator.isConfirm = function (selector, getConfirmValue, message) {
-    return {
-        selector,
-        test(value) {
-            return value === getConfirmValue() ? undefined : message || 'Giá trị nhập vào không đúng'
-        }
-    }
-}
+  }
 
+  validator.isRequired = (selector) => {
+      return {
+          selector,
+          test(value) {
+              return value.trim() ? undefined : 'Vui lòng nhập tên'
+          }
 
-Validator({
-  form: '#form-1',
-  formGroupSelector: '#form-group',
-  errorSelector: '.form-message',
-  rules: [ 
-      Validator.isRequired('#fullname'),
-      Validator.isEmail('#email'),
-      Validator.minLength('#password', 6),
-      Validator.isRequired('#password_confirmation'),
-      Validator.isConfirm('#password_confirmation', function() {
-        return document.querySelector('#form-1 #password').value
-      }, 'Mật khẩu nhập lại không chính xác'),
+      }
+  }
 
-  ],
- 
+  validator.isEmail = (selector) => {
+      return {
+          selector,
+          test(value) {
+              var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+              return regex.test(value) ? undefined : 'Vui lòng nhập Email'
+          }
+
+      }
+  }
+
+  validator.minLength = (selector, min) => {
+      return {
+          selector,
+          test(value) {
+              return value.length >= min ? undefined : `Vui lòng nhập tối thiểu ${min} kí tự`
+          }
+
+      }
+  }
+
+  validator.isConfirmed = (selector, getConfirmValue) => {
+      return {
+          selector,
+          test(value) {
+              return value === getConfirmValue() ? undefined : 'Mật khẩu nhập lại không chính xác'
+          }
+
+      }
+  }
+
+  validator({
+      form: '#form-1',
+      errorSelector: '.form-message',
+      rules: [ 
+          validator.isRequired('#fullname'),
+          validator.isEmail('#email'),
+          validator.minLength('#password', 6),
+          validator.isConfirmed('#password_confirmation', function () {
+              return document.querySelector('#form-1 #password').value
+          })
+          
+
+      ],
+   
+
 })
  
 
